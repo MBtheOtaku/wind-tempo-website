@@ -35,6 +35,8 @@ const TopNav: React.FC = () => {
           </div>
         </Link>
 
+        <div className="flex-1 max-w-50" />
+
         <div className="flex-1">
           <div className="flex items-center gap-2 rounded-full border border-zinc-700 bg-[#1a1a1b] px-3 py-1.5 focus-within:border-zinc-400">
             <Search className="h-4 w-4 text-zinc-400" />
@@ -45,6 +47,9 @@ const TopNav: React.FC = () => {
             />
           </div>
         </div>
+
+        <div className="flex-1 max-w-50" />
+
 
         <nav className="hidden items-center gap-2 lg:flex">
           {navItems.map((item) => {
