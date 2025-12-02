@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/navbars/TopNav";
+import { Sidebar } from "@/components/navbars/SideNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="bg-[#030303] text-zinc-100">
-        <div className="flex min-h-screen min-w-screen">
-          <div className="flex min-h-screen flex-1 flex-col">
-            <TopNav />
-            <main className="mx-auto flex w-full max-w-7xl flex-1 px-4 py-4">
-              {/* This is where your “Reddit-like” content / feeds go */}
-              {children}
-            </main>
-          </div>
+        <TopNav />
+        <div className="flex min-h-[calc(100vh-3rem)]">
+          <Sidebar />
+          <main className="flex-1 px-4 py-4">
+            {children}
+          </main>
         </div>
       </body>
     </html>
