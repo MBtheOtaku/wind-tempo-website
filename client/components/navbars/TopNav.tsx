@@ -42,7 +42,7 @@ const TopNav: React.FC = () => {
           <Link href="/" className="flex items-center gap-2 px-0">
             <div className="relative w-40 h-auto">
               <Image
-                src="/logo.png"
+                src="/logo_white.png"
                 alt="Wind Tempo"
                 width={300}
                 height={100}
