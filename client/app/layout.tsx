@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import TopNav from "@/components/navbars/TopNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +24,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="dark">
+      <body className="bg-[#030303] text-zinc-100">
+        <div className="flex min-h-screen min-w-screen">
+          <div className="flex min-h-screen flex-1 flex-col">
+            <TopNav />
+            <main className="mx-auto flex w-full max-w-7xl flex-1 px-4 py-4">
+              {/* This is where your “Reddit-like” content / feeds go */}
+              {children}
+            </main>
+          </div>
+        </div>
       </body>
     </html>
   );
